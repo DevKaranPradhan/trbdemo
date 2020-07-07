@@ -8,6 +8,13 @@ gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 gem 'trailblazer-rails', '~> 2.1', '>= 2.1.7'
 gem 'reform', '~> 2.3.0'
 gem 'reform-rails', '~> 0.2.0'
+gem 'trailblazer-macro'
+gem "trailblazer-cells"
+gem 'trailblazer-endpoint', github: 'trailblazer/trailblazer-endpoint'
+gem "pundit"
+gem "cells-rails"
+gem "cells-haml"
+gem 'simple_form', '4.0.0'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
