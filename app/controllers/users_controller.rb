@@ -20,7 +20,6 @@ class UsersController < ApplicationController
 
   def create
     run User::Operation::Create do | result |
-      # byebug
       token = JsonWebToken.encode(user_id: result[:model].id)
       session[:token] = token
       return redirect_to welcome_path
