@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
 
   def create
     if Session::Operation::Validate.(email: params[:email], password: params[:password])
-      byebug
       @user = User::Operation::Show.(email: params[:email])[:user]
       if @user && @user.authenticate(params[:password])
         token = JsonWebToken.encode(user_id: @user.id)
